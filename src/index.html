@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Bugs Register</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar">
+	<a class="nav-link">Log a Bug</a>
+	<a class="nav-link">View All Bugs</a>
+	<a class="nav-link">Login/Signup</a>
+</nav>
+
+<div class="container">
+	<h1 class="page-title">Log a New Bug</h1>
+	<hr class="divider">
+	<form class="bug-form" id="bug-form" onsubmit="return false;">
+		<div class="form-row">
+			<label class="form-label">Subject</label>
+			<input type="text" class="form-input" placeholder="Message Subject..." id="subject">
+		</div>
+		<div class="form-row">
+			<label class="form-label">Description</label>
+			<textarea class="form-input" placeholder="Please describe the issue..." id="description"></textarea>
+		</div>
+		<div class="form-row">
+			<label class="form-label">Priority</label>
+			<select class="form-dropdown" id="priority">
+				<option>Low</option>
+				<option>Medium</option>
+				<option>High</option>
+			</select>
+		</div>
+		<button type="submit" class="form-btn" id="submit-btn">Submit Bug</button>
+	</form>
+</div>
+
+<div class="container">
+	<h2 class="page-sub-title">My Bugs</h2>
+	<hr class="divider">
+	<div class="issue-list" id="open-issue-list"></div>
+	<div class="issue-list" id="closed-issue-list"></div>
+</div>
+
+<div class="modal" id="edit-details">
+	<div class="modal-content">
+		<span class="close-button" id="close-modal"><i class="fas fa-times"></i></span>
+		<h4 class="modal-title" id="modal-title"></h4>
+		<div class="modal-details" id="bug-details">
+			<form class="bug-form" id="bug-form" onsubmit="return false;">
+				<div class="form-row">
+					<label class="modal-form-label">Subject</label>
+					<input type="text" class="modal-form-input" placeholder="Message Subject..." id="modal-subject">
+				</div>
+				<div class="form-row">
+					<label class="modal-form-label">Description</label>
+					<textarea class="modal-form-input" placeholder="Please describe the issue..." id="modal-description"></textarea>
+				</div>
+				<div class="form-row">
+					<label class="modal-form-label">Priority</label>
+					<select class="modal-form-dropdown" id="modal-priority">
+						<option>Low</option>
+						<option>Medium</option>
+						<option>High</option>
+					</select>
+				</div>
+				<input type="hidden" id="bug-id">
+				<button type="submit" class="form-btn" id="save-changes-btn">Save Changes</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
