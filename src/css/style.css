@@ -1,0 +1,294 @@
+/* ---------- Global ---------- */
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap');
+
+body{
+	background-color: #d2dae2;
+	box-sizing: border-box;
+	color: #1e272e;
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+}
+
+.hidden{
+	display: none;
+}
+
+.resolution{
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	height: 5px;
+	max-width: 90%;
+	width: 90%;
+}
+/* ---------- Navbar ---------- */
+.navbar{
+	align-items: center;
+	background-color: #485460;
+	color: #f5f5f5;
+	display: flex;
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	height: 50px;
+	justify-content: space-evenly;
+}
+	.nav-link{
+		text-decoration: none;
+		transition: 0.5s;
+	}
+		.nav-link:hover{
+			color: #00aeef;
+			cursor: pointer;
+			transition: 0.5s;
+		}
+
+/* ---------- Page Content ---------- */
+.container{
+	background-color: #f5f5f5;
+	border-radius: 3px;
+	box-shadow:  0 0 10px #1e272e;
+	margin: 15px auto;
+	padding: 5px 10px 10px 10px;
+	text-align: center;
+	width: 80%;
+}
+	.page-title{
+		margin: 0;
+		font-size: 32px;
+	}
+	.page-sub-title{
+		margin: 0;
+		font-size: 26px;
+	}
+	.divider{
+		background-color: #485460;
+		border: none;
+		border-radius: 1px;
+		height: 2px;
+		margin: 10px auto;
+		width: 65%;
+	}
+	.divider-two{
+		background-color: #485460;
+		border: none;
+		border-radius: 1px;
+		height: 1px;
+		margin: 10px auto;
+		width: 100%;
+	}
+
+/* ---------- Form ---------- */
+.bug-form{
+	text-align: center;
+}
+	.form-row{
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+	.form-label{
+		font-size: 18px;
+		padding-top: 15px;
+		margin: auto;
+		max-width: 60%;
+		width: 60%;
+	}
+	textarea{
+		min-height: 100px;
+	}
+	.form-input{
+		font-family: "Open Sans", sans-serif;
+		font-size: 14px;
+		margin: auto;
+		padding: 0px;
+		width: 60%;
+	}
+	.form-dropdown{
+		font-size: 16px;
+		margin: auto;
+		width: 60%;
+	}
+	.form-btn{
+		background-color: #3b9cdc;
+		border: none;
+		border-radius: 1px;
+		color: #1e272e;
+		font-size: 18px;
+		font-weight: 600;
+		height: 40px;
+		margin: 10px auto;
+		transition: 0.5s;
+		width: 60%;
+	}
+		.form-btn:hover{
+			background-color: #00aeef;
+			cursor: pointer;
+			color: #f5f5f5;
+			transition: 0.5s;
+		}
+		
+/* ---------- Bug List ---------- */
+.bug-container{
+	padding: 5px;
+	text-align: left;
+	width: 100%;
+}
+	.bug-id{
+		font-style: italic;
+		margin: 5px 0;
+	}
+	.bug-timestamp{
+		font-style: italic;
+		margin: 0;
+	}
+	.bug-subject{
+		font-family: Lato, sans-serif;
+		font-size: 20px;
+		margin-bottom: 5px;
+		margin-top: 0;
+	}
+	.bug-desc{
+		font-size: 16px;
+		margin: 10px 0;
+		padding-left: 15px;
+	}
+	.bug-priority{
+		margin: 0;
+	}
+	.bug-status{
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	.bug-complete-btn{
+		background-color: #78ac33;
+		border: none;
+		border-radius: 3px;
+		color: #1e272e;
+		font-size: 18px;
+		font-weight: 600;
+		padding: 5px;
+		transition: 0.5s;
+		width: 30%;
+	}
+		.bug-complete-btn:hover{
+			background-color: #6b9435;
+			color: #f5f5f5;
+			cursor: pointer;
+			transition: 0.5s;
+		}
+	.bug-edit-btn{
+		background-color: #F7931D;
+		border: none;
+		border-radius: 3px;
+		color: #1e272e;
+		font-size: 18px;
+		font-weight: 600;
+		padding: 5px;
+		transition: 0.5s;
+		width: 30%;
+	}
+		.bug-edit-btn:hover{
+			background-color: #e08315;
+			color: #f5f5f5;
+			cursor: pointer;
+			transition: 0.5s;
+		}
+	.bug-delete-btn{
+		background-color: #ff0000;
+		border: none;
+		border-radius: 3px;
+		color: #1e272e;
+		font-size: 18px;
+		font-weight: 600;
+		padding: 5px;
+		transition: 0.5s;
+		width: 30%;
+	}
+		.bug-delete-btn:hover{
+			background-color: #bf202f;
+			color: #f5f5f5;
+			cursor: pointer;
+			transition: 0.5s;
+		}
+	.bug-closed{
+		color: #6b9435;
+	}
+	.bug-open{
+		color: #bf202f;
+	}
+
+/* -------------------- Modal -------------------- */	
+.modal{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(47, 54, 64, 0.9);
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(1.1);
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+	z-index: 4;
+}
+	.modal-content{
+		position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #dcdde1;
+        padding: 10px 25px;
+        width: 80vw;
+		height: 80vh;
+        border-radius: 0.5rem;
+	}
+		.modal-title{
+			font-family: Roboto;
+			font-size: 32px;
+			padding-left: 20px;
+			margin: 0;
+		}
+		.close-button{
+			float: right;
+			font-size: 20px;
+			width: 30px;
+			line-height: 1.5rem;
+			text-align: center;
+			cursor: pointer;
+			color: #c23616;
+			transition: 0.25s;
+			
+		}
+		.close-button:hover{
+			color: #863f2f;
+			transition: 0.25s;
+		}
+		.modal-form-label{
+			font-size: 18px;
+			padding-top: 15px;
+			margin: auto;
+			max-width: 80%;
+			width: 70%;
+		}
+		.modal-form-input{
+			border: solid 1px;
+			font-family: "Open Sans", sans-serif;
+			font-size: 14px;
+			margin: auto;
+			max-width: 80%;
+			padding: 5px;
+			width: 70%;
+		}
+		.modal-form-dropdown{
+			border: solid 1px;
+			font-size: 16px;
+			margin: auto;
+			min-width: 70%;
+			padding: 5px;
+			width: 70%;
+		}
+.show-modal{
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.0);
+	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;	
+}
