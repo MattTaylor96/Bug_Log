@@ -44,8 +44,7 @@ function loadBugs(){
 			<textarea class="resolution" placeholder="Enter Resolution Details Here..." data-id="${bugLog[i].bugID}"></textarea>
 			<button type="button" class="bug-complete-btn" data-id="${bugLog[i].bugID}">Close Bug</button>
 			<button type="button" class="bug-edit-btn" data-id="${bugLog[i].bugID}">Edit Bug</button>
-			<button type="button" class="bug-delete-btn" data-id="${bugLog[i].bugID}">Delete Bug</button>
-			<hr class="divider-two">`;
+			<button type="button" class="bug-delete-btn" data-id="${bugLog[i].bugID}">Delete Bug</button>`;
 			// Add the container to the bug list
 			bugDisplay.append(bugContainer);
 		} else{
