@@ -17,8 +17,8 @@ body{
 	font-family: "Open Sans", sans-serif;
 	font-size: 16px;
 	height: 5px;
-	max-width: 90%;
-	width: 90%;
+	max-width: 100%;
+	width: 98%;
 }
 /* ---------- Navbar ---------- */
 .navbar{
@@ -128,9 +128,13 @@ body{
 		
 /* ---------- Bug List ---------- */
 .bug-container{
+	background-color: #d2dae2;
+	border-radius: 3px;
+	box-shadow:  0 0 5px #1e272e;
+	margin: 0 auto 10px auto;
 	padding: 5px;
 	text-align: left;
-	width: 100%;
+	width: 95%;
 }
 	.bug-id{
 		font-style: italic;
